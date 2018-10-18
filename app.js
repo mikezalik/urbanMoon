@@ -27,6 +27,7 @@ function geoLocate () {
 //AJAX request - Data received in JSON
 
 //TODO: Complete AJAX request and add DOM manipulation elements.
+//TODO: Add temp conversion? May be required if OpenWeatherAPI returns C
 
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
