@@ -16,10 +16,24 @@ function geoLocate () {
         console.log = "Geolocation is not supported by your browser";
         return;
     }
-
+    
     function success(position) {
         var lat = "lat=" + position.coords.latitude;
         var lon = "lon=" + position.coords.longitude;
-        getWeather(lat, long);
+        getWeather(lat, lon);
+    }
+}
+
+//AJAX request - Data received in JSON
+function getWeather(lat, lon) {
+    var httpRequest = new XMLHttpRequest();
+    var urlString = api + lat + "&" + lon + key;
+    httpRequest.open('GET', urlString);
+    httpRequest.send();
+
+httpRequest.onreadystatechange=function(){
+    if(this.readystate==4 && this.status==200) {
+        console.log(httpRequest.responseText)
+    }
     }
 }
