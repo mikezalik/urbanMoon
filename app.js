@@ -26,6 +26,8 @@ function geoLocate () {
 
 //AJAX request - Data received in JSON
 
+//TODO: Complete AJAX request and add DOM manipulation elements.
+
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
