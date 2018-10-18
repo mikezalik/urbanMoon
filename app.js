@@ -31,9 +31,9 @@ function getWeather(lat, lon) {
     httpRequest.open('GET', urlString);
     httpRequest.send();
 
-httpRequest.onreadystatechange=function(){
-    if(this.readystate==4 && this.status==200) {
-        console.log(httpRequest.responseText)
-    }
+    httpRequest.onreadystatechange=function(){
+        if(this.readystate==4 && this.status==200) {
+            console.log(httpRequest.responseText)
+        }
     }
 }
