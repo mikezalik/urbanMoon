@@ -1,4 +1,4 @@
-//urbanMoon JavaScript
+// urbanMoon JavaScript
 // Variables
 
 var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
@@ -8,6 +8,8 @@ var tempUnit = 'C';
 var currentTemperatureInCelsius;
 
 // Geolocation - lat, lon for openweather API
+
+//TODO: Update ElementID
 
 function geoLocate () {
     var output = document.getElementById("out");
