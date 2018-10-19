@@ -12,17 +12,18 @@ var currentTemperatureInCelsius;
 //TODO: Update ElementID
 
 function geoLocate () {
-    var output = document.getElementById("out");
 
     if (!navigator.geolocation){
         console.log = "Geolocation is not supported by your browser";
         return;
-    }
+    } else {
     
     function success(position) {
         var lat = "lat=" + position.coords.latitude;
         var lon = "lon=" + position.coords.longitude;
         getWeather(lat, lon);
+    }
+    navigator.geolocation.getCurrentPosition(success);   
     }
 }
 
@@ -34,12 +35,15 @@ function geoLocate () {
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
-    httpRequest.open('GET', urlString);
-    httpRequest.send();
+
 
     httpRequest.onreadystatechange=function(){
         if(this.readystate==4 && this.status==200) {
-            console.log(httpRequest.responseText)
+            var myArr= JSON.parse(this.responseText);
+            myFunction (myArr);
         }
+    };
+
+        httpRequest.open('GET', urlString, true);
+        httpRequest.send();
     }
-}
