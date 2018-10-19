@@ -11,21 +11,28 @@ var currentTemperatureInCelsius;
 
 //TODO: Update ElementID
 
-function geoLocate () {
 
-    if (!navigator.geolocation){
-        console.log = "Geolocation is not supported by your browser";
-        return;
+
+function geoLocate() {
+    navigator.permissions.query({name:'geolocation'}).then(function(result){
+        if (result.state=== 'granted') {
+            geoLocate();
+        } else if (result.state==='prompt') {
+            console.log = "Geolocation necessary to enable app features";
+        }
+    });
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(success);
     } else {
-    
+        console.log = "Geolocation is not supported by this browser";
+    }
+}
     function success(position) {
         var lat = "lat=" + position.coords.latitude;
         var lon = "lon=" + position.coords.longitude;
         getWeather(lat, lon);
     }
-    navigator.geolocation.getCurrentPosition(success);   
-    }
-}
+
 
 //AJAX request - Data received in JSON
 
@@ -40,10 +47,11 @@ function getWeather(lat, lon) {
     httpRequest.onreadystatechange=function(){
         if(this.readystate==4 && this.status==200) {
             var myArr= JSON.parse(this.responseText);
-            myFunction (myArr);
+            getWeather (myArr);
         }
     };
-
-        httpRequest.open('GET', urlString, true);
+        httpRequest.open('GET', urlString);
+        httpRequest.responseType= 'json';
         httpRequest.send();
     }
+
