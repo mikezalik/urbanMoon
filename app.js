@@ -9,7 +9,7 @@ var currentTemperatureInCelsius;
 
 // Geolocation - lat, lon for openweather API
 
-//TODO: Update ElementID
+//TODO: Update permissions and geolocation.
 
 
 
