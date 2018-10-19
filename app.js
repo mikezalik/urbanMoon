@@ -9,18 +9,14 @@ var currentTemperatureInCelsius;
 
 // Geolocation - lat, lon for openweather API
 
-//TODO: Update permissions and geolocation.
+//TODO: Set up parse to DOM elements.
 
-
+document.addEventListener("load", geoLocate()); {
+    console.log("Loaded");
+}
 
 function geoLocate() {
-    navigator.permissions.query({name:'geolocation'}).then(function(result){
-        if (result.state=== 'granted') {
-            geoLocate();
-        } else if (result.state==='prompt') {
-            console.log = "Geolocation necessary to enable app features";
-        }
-    });
+
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(success);
     } else {
