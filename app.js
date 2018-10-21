@@ -1,6 +1,7 @@
 // urbanMoon JavaScript
 // Variables
 
+
 var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
@@ -17,6 +18,7 @@ function geoLocate() {
 
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(success);
+        console.log("Success");
     } else {
         console.log = "Geolocation is not supported by this browser";
     }
@@ -30,24 +32,25 @@ function geoLocate() {
 
 //AJAX request - Data received in JSON
 
-//TODO: Complete AJAX request and add DOM manipulation elements.
-//TODO: Add temp conversion? May be required if OpenWeatherAPI returns C
+//TODO: Complete AJAX request and add DOM elements.
+//TODO: Add temperature conversion for K to F.
 
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
-
-
-    httpRequest.onreadystatechange=function(){
+    var myArr= {};
+    
+        httpRequest.onreadystatechange=function(){
         if(this.readystate==4 && this.status==200) {
             var myArr= JSON.parse(this.responseText);
-            getWeather (myArr);
-
+            
             document.getElementById("city").innerHTML = myArr.name;
+            document.getElementById("temperature").id = myArr.main[2];
+            document.getElementById("humidity").innerHTML = myArr.main[0];
         }
     };
         httpRequest.open('GET', urlString);
-        httpRequest.responseType= 'json';
         httpRequest.send();
+        console.log(myArr);
     }
 
