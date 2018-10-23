@@ -39,18 +39,20 @@ function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
     var myArr= {};
+
+    httpRequest.open('GET', urlString);
+    httpRequest.send();
     
-        httpRequest.onreadystatechange=function(){
-        if(this.readystate==4 && this.status==200) {
+        httpRequest.onload=function(){
+            var myArr = httpRequest.response;
             var myArr= JSON.parse(this.responseText);
             
             document.getElementById("city").innerHTML = myArr.name;
-            document.getElementById("temperature").id = myArr.main[2];
-            document.getElementById("humidity").innerHTML = myArr.main[0];
-        }
+            document.getElementById("temperature").innerHTML = myArr.main.temp;
+            document.getElementById("humidity").innerHTML = myArr.main.humidity;
+        
     };
-        httpRequest.open('GET', urlString);
-        httpRequest.send();
+
         console.log(myArr);
     }
 
