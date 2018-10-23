@@ -1,19 +1,18 @@
 // urbanMoon JavaScript
+
+
 // Variables
-
-
 var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 
-// Geolocation - lat, lon for openweather API
 
-//TODO: Set up parse to DOM elements.
-
+//geoLocate on page load
 document.addEventListener("load", geoLocate()); {
     console.log("Loaded");
 }
 
+// Geolocation - lat, lon for openweather API
 function geoLocate() {
 
     if (navigator.geolocation){
@@ -30,10 +29,12 @@ function geoLocate() {
     }
 
 
-//AJAX request - Data received in JSON
 
-//TODO: Add temperature conversion for K to F.
 
+//TODO: Add temperature conversion for K to F
+//TODO: Add symbols to values
+
+//AJAX request
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
@@ -50,5 +51,5 @@ function getWeather(lat, lon) {
             document.getElementById("humidity").innerHTML = myArr.main.humidity;
             document.getElementById("summary").innerHTML = myArr.weather[0].description;
         };
-    }
+}
 
