@@ -31,8 +31,6 @@ function geoLocate() {
 
 
 
-//TODO: Add temperature conversion for K to F
-//TODO: Add symbols to values
 
 //AJAX request
 function getWeather(lat, lon) {
@@ -45,10 +43,12 @@ function getWeather(lat, lon) {
         httpRequest.onload=function(){
             var myArr = httpRequest.response;
             var myArr= JSON.parse(this.responseText);
+
+            tempConv = Math.round((myArr.main.temp - 273.15) * 1.8 + 32) + String.fromCharCode (176);
             
             document.getElementById("city").innerHTML = myArr.name;
-            document.getElementById("temperature").innerHTML = myArr.main.temp;
-            document.getElementById("humidity").innerHTML = myArr.main.humidity;
+            document.getElementById("temperature").innerHTML = tempConv;
+            document.getElementById("humidity").innerHTML = myArr.main.humidity + "%";
             document.getElementById("summary").innerHTML = myArr.weather[0].description;
         };
 }
