@@ -37,7 +37,6 @@ function geoLocate() {
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
-    var myArr= {};
 
     httpRequest.open('GET', urlString);
     httpRequest.send();
