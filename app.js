@@ -32,7 +32,6 @@ function geoLocate() {
 
 //AJAX request - Data received in JSON
 
-//TODO: Complete AJAX request and add DOM elements.
 //TODO: Add temperature conversion for K to F.
 
 function getWeather(lat, lon) {
@@ -50,9 +49,7 @@ function getWeather(lat, lon) {
             document.getElementById("city").innerHTML = myArr.name;
             document.getElementById("temperature").innerHTML = myArr.main.temp;
             document.getElementById("humidity").innerHTML = myArr.main.humidity;
-        
-    };
-
-        console.log(myArr);
+            document.getElementById("summary").innerHTML = myArr.weather[0].description;
+        };
     }
 
