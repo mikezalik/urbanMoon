@@ -6,11 +6,8 @@ var api = "https://api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 
-
 //geoLocate on page load
-document.addEventListener("load", geoLocate()); {
-    console.log("Loaded");
-}
+document.addEventListener("load", geoLocate());
 
 // Geolocation - lat, lon for openweather API
 function geoLocate() {
