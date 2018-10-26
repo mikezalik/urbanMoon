@@ -2,7 +2,7 @@
 
 
 // Variables
-var api = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?";
+var api = "http://api.openweathermap.org/data/2.5/weather?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 
@@ -19,7 +19,7 @@ function geoLocate() {
         navigator.geolocation.getCurrentPosition(success);
         console.log("Success");
     } else {
-        console.log = "Geolocation is not supported by this browser";
+        alert("Geolocation is not supported by this browser");
     }
 }
     function success(position) {
