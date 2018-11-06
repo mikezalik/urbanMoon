@@ -1,5 +1,5 @@
 // urbanMoon JavaScript
-
+// TODO: React?
 
 // Variables
 var api = "https://api.openweathermap.org/data/2.5/weather?";
