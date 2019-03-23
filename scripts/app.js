@@ -25,6 +25,7 @@ function geoLocate() {
         getWeather(lat, lon);
     }
 
+    
 //AJAX request
 function getWeather(lat, lon) {
     var httpRequest = new XMLHttpRequest();
