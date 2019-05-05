@@ -58,11 +58,23 @@ function getWeather(lat, lon) {
             document.getElementById("summary").innerHTML = myArr.list[16].weather[0].description; 
             document.getElementById("datetime").innerHTML = myArr.list[16].dt_txt; */
 
-            document.getElementById("city").innerHTML = myArr.city.name;
+            /* document.getElementById("city").innerHTML = myArr.city.name;
             document.getElementById("temperature").innerHTML = tempConv;
             document.getElementById("humidity").innerHTML = myArr.list[24].main.humidity + "%";
             document.getElementById("summary").innerHTML = myArr.list[24].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[24].dt_txt;
+            document.getElementById("datetime").innerHTML = myArr.list[24].dt_txt; */
+
+            /* document.getElementById("city").innerHTML = myArr.city.name;
+            document.getElementById("temperature").innerHTML = tempConv;
+            document.getElementById("humidity").innerHTML = myArr.list[32].main.humidity + "%";
+            document.getElementById("summary").innerHTML = myArr.list[32].weather[0].description; 
+            document.getElementById("datetime").innerHTML = myArr.list[32].dt_txt; */
+
+            document.getElementById("city").innerHTML = myArr.city.name;
+            document.getElementById("temperature").innerHTML = tempConv;
+            document.getElementById("humidity").innerHTML = myArr.list[39].main.humidity + "%";
+            document.getElementById("summary").innerHTML = myArr.list[39].weather[0].description; 
+            document.getElementById("datetime").innerHTML = myArr.list[39].dt_txt;
 
 
         };
