@@ -46,11 +46,19 @@ function getWeather(lat, lon) {
             document.getElementById("summary").innerHTML = myArr.list[0].weather[0].description; 
             document.getElementById("datetime").innerHTML = myArr.list[0].dt_txt; */
 
-            document.getElementById("city").innerHTML = myArr.city.name;
+            /* document.getElementById("city").innerHTML = myArr.city.name;
             document.getElementById("temperature").innerHTML = tempConv;
             document.getElementById("humidity").innerHTML = myArr.list[8].main.humidity + "%";
             document.getElementById("summary").innerHTML = myArr.list[8].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[8].dt_txt;
+            document.getElementById("datetime").innerHTML = myArr.list[8].dt_txt; */
+
+            document.getElementById("city").innerHTML = myArr.city.name;
+            document.getElementById("temperature").innerHTML = tempConv;
+            document.getElementById("humidity").innerHTML = myArr.list[16].main.humidity + "%";
+            document.getElementById("summary").innerHTML = myArr.list[16].weather[0].description; 
+            document.getElementById("datetime").innerHTML = myArr.list[16].dt_txt;
+
+
         };
 }
 
