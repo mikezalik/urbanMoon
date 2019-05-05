@@ -2,8 +2,8 @@
 // TODO: React?
 
 // Variables
-var api = "https://api.openweathermap.org/data/2.5/forecast/daily?";
-var key = "&APPID=a60f333d8b9fb5afc4078cd45c37def8";
+var api = "https://api.openweathermap.org/data/2.5/forecast?";
+var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 
 //geoLocate on page load
