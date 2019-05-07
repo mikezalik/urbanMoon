@@ -1,5 +1,4 @@
 // urbanMoon JavaScript
-// TODO: React?
 
 // Variables
 var api = "https://api.openweathermap.org/data/2.5/forecast?";
@@ -7,7 +6,7 @@ var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 var lat, lon;
 
 //geoLocate on page load
-document.addEventListener("load", geoLocate());
+document.addEventListener("load", location());
 
 // Geolocation - lat, lon for openweather API
 function geoLocate() {
@@ -34,7 +33,7 @@ function getWeather(lat, lon) {
     httpRequest.open('GET', urlString);
     httpRequest.send();
     
-        httpRequest.onload=function(){
+       httpRequest.onload = function(){
             var myArr = httpRequest.response;
             var myArr= JSON.parse(this.responseText);
 
