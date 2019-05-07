@@ -1,5 +1,8 @@
 // urbanMoon JavaScript
 
+
+
+
 // Variables
 var api = "https://api.openweathermap.org/data/2.5/forecast?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
@@ -45,36 +48,34 @@ function getWeather(lat, lon) {
             document.getElementById("currentSummary").innerHTML = myArr.list[0].weather[0].description; 
             document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;
 
-            /* 
-            document.getElementById("temperature").innerHTML = tempConv;
-            document.getElementById("humidity").innerHTML = myArr.list[8].main.humidity + "%";
-            document.getElementById("summary").innerHTML = myArr.list[8].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[8].dt_txt; */
-
-            /* 
-            document.getElementById("temperature").innerHTML = tempConv;
-            document.getElementById("humidity").innerHTML = myArr.list[16].main.humidity + "%";
-            document.getElementById("summary").innerHTML = myArr.list[16].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[16].dt_txt; */
-
-            /* 
-            document.getElementById("temperature").innerHTML = tempConv;
-            document.getElementById("humidity").innerHTML = myArr.list[24].main.humidity + "%";
-            document.getElementById("summary").innerHTML = myArr.list[24].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[24].dt_txt; */
-
-            /* 
-            document.getElementById("temperature").innerHTML = tempConv;
-            document.getElementById("humidity").innerHTML = myArr.list[32].main.humidity + "%";
-            document.getElementById("summary").innerHTML = myArr.list[32].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[32].dt_txt; */
+             
+            document.getElementById("day2Temperature").innerHTML = tempConv;
+            document.getElementById("day2Humidity").innerHTML = myArr.list[8].main.humidity + "%";
+            document.getElementById("day2Summary").innerHTML = myArr.list[8].weather[0].description; 
+            document.getElementById("day2DateTime").innerHTML = myArr.list[8].dt_txt; 
 
             
-            document.getElementById("temperature").innerHTML = tempConv;
-            document.getElementById("humidity").innerHTML = myArr.list[39].main.humidity + "%";
-            document.getElementById("summary").innerHTML = myArr.list[39].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[39].dt_txt;
+            document.getElementById("day3Temperature").innerHTML = tempConv;
+            document.getElementById("day3Humidity").innerHTML = myArr.list[16].main.humidity + "%";
+            document.getElementById("day3Summary").innerHTML = myArr.list[16].weather[0].description; 
+            document.getElementById("day3DateTime").innerHTML = myArr.list[16].dt_txt; 
 
+            
+            document.getElementById("day4Temperature").innerHTML = tempConv;
+            document.getElementById("day4Humidity").innerHTML = myArr.list[24].main.humidity + "%";
+            document.getElementById("day4Summary").innerHTML = myArr.list[24].weather[0].description; 
+            document.getElementById("day4DateTime").innerHTML = myArr.list[24].dt_txt;
+
+            
+            document.getElementById("day5Temperature").innerHTML = tempConv;
+            document.getElementById("day5Humidity").innerHTML = myArr.list[32].main.humidity + "%";
+            document.getElementById("day5Summary").innerHTML = myArr.list[32].weather[0].description; 
+            document.getElementById("day5DateTime").innerHTML = myArr.list[32].dt_txt; 
+
+            
+
+
+            
 
         };
 }
