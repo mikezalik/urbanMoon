@@ -3,6 +3,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Variables
 var api = "https://api.openweathermap.org/data/2.5/forecast?";
 var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
@@ -75,7 +94,7 @@ function getWeather(lat, lon) {
             
 
 
-            
+
 
         };
 }
