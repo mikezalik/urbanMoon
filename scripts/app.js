@@ -39,11 +39,11 @@ function getWeather(lat, lon) {
 
             tempConv = Math.round((myArr.list[0].main.temp - 273.15) * 1.8 + 32) + String.fromCharCode (176);
             
-            /* document.getElementById("city").innerHTML = myArr.city.name;
-            document.getElementById("temperature").innerHTML = tempConv;
-            document.getElementById("humidity").innerHTML = myArr.list[0].main.humidity + "%";
-            document.getElementById("summary").innerHTML = myArr.list[0].weather[0].description; 
-            document.getElementById("datetime").innerHTML = myArr.list[0].dt_txt; */
+            document.getElementById("city").innerHTML = myArr.city.name;
+            document.getElementById("currentTemperature").innerHTML = tempConv;
+            document.getElementById("currentHumidity").innerHTML = myArr.list[0].main.humidity + "%";
+            document.getElementById("currentSummary").innerHTML = myArr.list[0].weather[0].description; 
+            document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;
 
             /* 
             document.getElementById("temperature").innerHTML = tempConv;
