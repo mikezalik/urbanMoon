@@ -27,7 +27,7 @@
 
 /* GENERAL */
 * {
-    font-size: 16px;
+    font-size: 12px;
 }
 body {
     justify-content: center;
@@ -162,7 +162,7 @@ body {
         background-color: #F0F0EB;
         border: none;
         border-radius: 5px;
-        font-size: .5em;
+        font-size: .2em;
         margin-left: auto;
         margin-right: auto;
         max-width:90%; 
@@ -177,7 +177,7 @@ body {
         width: 100%;
         padding:1em; 
         text-align: left;
-        font-size: .5em;
+        font-size: .2em;
 }
 
 		
