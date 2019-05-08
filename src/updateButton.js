@@ -19,5 +19,5 @@ class UpdateButton extends React.Component {
   }
 }
 
-let domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(<LikeButton />, domContainer);
+let domContainer = document.querySelector('#update_button_container');
+ReactDOM.render(<UpdateButton />, domContainer);

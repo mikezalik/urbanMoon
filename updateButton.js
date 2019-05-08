@@ -42,5 +42,5 @@ var UpdateButton = function (_React$Component) {
   return UpdateButton;
 }(React.Component);
 
-var domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(React.createElement(LikeButton, null), domContainer);
+var domContainer = document.querySelector('#update_button_container');
+ReactDOM.render(React.createElement(UpdateButton, null), domContainer);
