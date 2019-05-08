@@ -76,4 +76,3 @@ function getWeather(lat, lon) {
 
         };
 }
-
