@@ -24,3 +24,5 @@ var DayOne = function (_React$Component) {
 
     return DayOne;
 }(React.Component);
+
+ReactDOM.render();

@@ -6,4 +6,4 @@ class DayTwo extends React.Component {
     }
 }
 
-ReactDOM.render ();
+ReactDOM.render (<dayTwo />, );

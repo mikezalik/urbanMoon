@@ -25,4 +25,4 @@ var DayTwo = function (_React$Component) {
     return DayTwo;
 }(React.Component);
 
-ReactDOM.render();
+ReactDOM.render(React.createElement('dayTwo', null));
