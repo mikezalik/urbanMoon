@@ -25,4 +25,4 @@ var DayOne = function (_React$Component) {
     return DayOne;
 }(React.Component);
 
-ReactDOM.render();
+ReactDOM.render(React.createElement(DayOne, null));
