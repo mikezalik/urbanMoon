@@ -8,34 +8,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DayOne = function (_React$Component) {
-    _inherits(DayOne, _React$Component);
+var DayThree = function (_React$Component) {
+    _inherits(DayThree, _React$Component);
 
-    function DayOne() {
-        _classCallCheck(this, DayOne);
+    function DayThree() {
+        _classCallCheck(this, DayThree);
 
-        return _possibleConstructorReturn(this, (DayOne.__proto__ || Object.getPrototypeOf(DayOne)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (DayThree.__proto__ || Object.getPrototypeOf(DayThree)).apply(this, arguments));
     }
 
-    _createClass(DayOne, [{
-        key: "render",
-        value: function render() {
-            return React.createElement(
-                "div",
-                { "class": "col" },
-                React.createElement(
-                    "h2",
-                    null,
-                    "Date"
-                ),
-                React.createElement("span", { id: "currentDateTime" })
-            );
-        }
+    _createClass(DayThree, [{
+        key: 'render',
+        value: function render() {}
     }]);
 
-    return DayOne;
+    return DayThree;
 }(React.Component);
 
-;
-
-ReactDOM.render(React.createElement(DayOne, null), document.querySelector('#row align-items-center'));
+ReactDOM.render(React.createElement(DayThree, null));
