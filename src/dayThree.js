@@ -1,7 +1,7 @@
 'use strict';
 
 class DayThree extends React.Component {
-    render () {
+    render() {
 
     }
 }
