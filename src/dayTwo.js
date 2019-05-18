@@ -9,4 +9,4 @@ class DayTwo extends React.Component {
     }
 }
 
-ReactDOM.render (<DayTwo />, );
+ReactDOM.render (<DayTwo />, document.querySelector('#row align-items-center') );

@@ -18,11 +18,22 @@ var DayTwo = function (_React$Component) {
     }
 
     _createClass(DayTwo, [{
-        key: 'render',
-        value: function render() {}
+        key: "render",
+        value: function render() {
+            React.createElement(
+                "div",
+                { "class": "col" },
+                React.createElement(
+                    "h2",
+                    null,
+                    "Date"
+                ),
+                React.createElement("span", { id: "currentDateTime" })
+            );
+        }
     }]);
 
     return DayTwo;
 }(React.Component);
 
-ReactDOM.render(React.createElement(DayTwo, null));
+ReactDOM.render(React.createElement(DayTwo, null), document.querySelector('#row align-items-center'));
