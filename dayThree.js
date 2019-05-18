@@ -25,4 +25,4 @@ var DayThree = function (_React$Component) {
     return DayThree;
 }(React.Component);
 
-ReactDOM.render(React.createElement(DayThree, null));
+ReactDOM.render(React.createElement(DayThree, null), document.querySelector('#row align-items-center'));
