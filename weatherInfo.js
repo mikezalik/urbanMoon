@@ -18,9 +18,22 @@ export var WeatherInfo = function (_React$Component) {
     }
 
     _createClass(WeatherInfo, [{
-        key: 'render',
+        key: "render",
         value: function render() {
-            return React.createElement('div', null);
+            var date = document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;
+            return React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                        "h2",
+                        null,
+                        date
+                    )
+                )
+            );
         }
     }]);
 
