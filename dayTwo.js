@@ -20,17 +20,12 @@ var DayTwo = function (_React$Component) {
     }
 
     _createClass(DayTwo, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             React.createElement(
-                "div",
-                { "class": "col" },
-                React.createElement(
-                    "h2",
-                    null,
-                    "Date"
-                ),
-                React.createElement("span", { id: "currentDateTime" })
+                'div',
+                null,
+                React.createElement(WeatherInfo, null)
             );
         }
     }]);
