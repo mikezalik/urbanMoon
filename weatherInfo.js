@@ -32,6 +32,24 @@ export var WeatherInfo = function (_React$Component) {
                         null,
                         date
                     )
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                        "h2",
+                        null,
+                        date2
+                    )
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                        "h2",
+                        null,
+                        date3
+                    )
                 )
             );
         }

@@ -8,6 +8,12 @@ export class WeatherInfo extends React.Component {
                 <div>
                     <h2>{date}</h2>
                 </div>
+                <div>
+                    <h2>{date2}</h2>
+                </div>
+                <div>
+                    <h2>{date3}</h2>
+                </div>
             </div>
         )
     }
