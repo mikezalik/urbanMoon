@@ -3,10 +3,10 @@ import { WeatherInfo } from "./weatherInfo";
 
 class DayTwo extends React.Component {
     render() {
-        <div class="col">
-        <h2>Date</h2>
-          <span id="currentDateTime"></span>
-      </div>
+        <div>
+            <WeatherInfo />
+
+        </div>
     }
 }
 
