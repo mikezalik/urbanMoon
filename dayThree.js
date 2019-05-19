@@ -21,7 +21,13 @@ var DayThree = function (_React$Component) {
 
     _createClass(DayThree, [{
         key: 'render',
-        value: function render() {}
+        value: function render() {
+            React.createElement(
+                'div',
+                null,
+                React.createElement(WeatherInfo, null)
+            );
+        }
     }]);
 
     return DayThree;
