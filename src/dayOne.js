@@ -1,4 +1,5 @@
 'use strict';
+import { WeatherInfo } from "./weatherInfo";
 
 class DayOne extends React.Component {
     render() {

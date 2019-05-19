@@ -1,7 +1,9 @@
 'use strict';
 
-
-
-class weatherInfo extends React.Component {
-
+export class WeatherInfo extends React.Component {
+    render () {
+        return (
+            <div></div>
+        )
+    }
 }
