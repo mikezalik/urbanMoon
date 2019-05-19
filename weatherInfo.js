@@ -21,6 +21,10 @@ export var WeatherInfo = function (_React$Component) {
         key: "render",
         value: function render() {
             var date = document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;
+            var date2 = document.getElementById("day2DateTime").innerHTML = myArr.list[8].dt_txt;
+            var date3 = document.getElementById("day3DateTime").innerHTML = myArr.list[16].dt_txt;
+            var date4 = document.getElementById("day4DateTime").innerHTML = myArr.list[24].dt_txt;
+            var date5 = document.getElementById("day5DateTime").innerHTML = myArr.list[32].dt_txt;
             return React.createElement(
                 "div",
                 null,
