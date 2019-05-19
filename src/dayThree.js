@@ -3,6 +3,10 @@ import { WeatherInfo } from "./weatherInfo";
 
 class DayThree extends React.Component {
     render() {
+        <div>
+        <WeatherInfo />
+
+        </div>
 
     }
 }
