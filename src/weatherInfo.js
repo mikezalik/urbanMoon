@@ -28,3 +28,4 @@ export class WeatherInfo extends React.Component {
         )
     }
 }
+
