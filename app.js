@@ -1,10 +1,11 @@
 // urbanMoon JavaScript
 //TODO: React
+'use strict';
 
 // Variables
-var api = "https://api.openweathermap.org/data/2.5/forecast?";
-var key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
-var lat, lon;
+let api = "https://api.openweathermap.org/data/2.5/forecast?";
+let key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
+let lat, lon;
 
 //geoLocate on page load
 document.addEventListener("load", geoLocate());
@@ -22,14 +23,14 @@ function geoLocate() {
 
 //lat, lon to call getWeather and retrieve JSON
 function success(position) {
-    var lat = "lat=" + position.coords.latitude;
-    var lon = "lon=" + position.coords.longitude;
+    let lat = "lat=" + position.coords.latitude;
+    let lon = "lon=" + position.coords.longitude;
     getWeather(lat, lon);
 }
 
 //AJAX request
 function getWeather(lat, lon) {
-    var httpRequest = new XMLHttpRequest();
+    let httpRequest = new XMLHttpRequest();
     var urlString = api + lat + "&" + lon + key;
 
     httpRequest.open('GET', urlString);
