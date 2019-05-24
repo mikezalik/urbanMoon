@@ -26,5 +26,5 @@ export class WeatherInfo extends React.Component {
                 </div>
             </div>
         )
-    }
+    };
 }
