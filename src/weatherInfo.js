@@ -1,5 +1,8 @@
 'use strict';
 
+import { getWeather } from '../app.js';
+
+
 class WeatherInfo extends React.Component {
     render () {
         const date = document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;

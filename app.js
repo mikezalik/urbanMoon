@@ -70,3 +70,5 @@ function getWeather(lat, lon) {
         document.getElementById("day5DateTime").innerHTML = myArr.list[32].dt_txt; 
     };
 }
+
+export { getWeather, myArr };

@@ -8,6 +8,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+import { getWeather } from '../app.js';
+
 var WeatherInfo = function (_React$Component) {
     _inherits(WeatherInfo, _React$Component);
 
@@ -18,7 +20,7 @@ var WeatherInfo = function (_React$Component) {
     }
 
     _createClass(WeatherInfo, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             var date = document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;
             var date2 = document.getElementById("day2DateTime").innerHTML = myArr.list[8].dt_txt;
@@ -26,49 +28,49 @@ var WeatherInfo = function (_React$Component) {
             var date4 = document.getElementById("day4DateTime").innerHTML = myArr.list[24].dt_txt;
             var date5 = document.getElementById("day5DateTime").innerHTML = myArr.list[32].dt_txt;
             return React.createElement(
-                "div",
+                'div',
                 null,
                 React.createElement(
-                    "div",
+                    'div',
                     null,
                     React.createElement(
-                        "h2",
+                        'h2',
                         null,
                         date
                     )
                 ),
                 React.createElement(
-                    "div",
+                    'div',
                     null,
                     React.createElement(
-                        "h2",
+                        'h2',
                         null,
                         date2
                     )
                 ),
                 React.createElement(
-                    "div",
+                    'div',
                     null,
                     React.createElement(
-                        "h2",
+                        'h2',
                         null,
                         date3
                     )
                 ),
                 React.createElement(
-                    "div",
+                    'div',
                     null,
                     React.createElement(
-                        "h2",
+                        'h2',
                         null,
                         date4
                     )
                 ),
                 React.createElement(
-                    "div",
+                    'div',
                     null,
                     React.createElement(
-                        "h2",
+                        'h2',
                         null,
                         date5
                     )
