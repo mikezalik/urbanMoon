@@ -1,9 +1,8 @@
 'use strict';
 
-import { getWeather } from '../app.js';
+import { myArr } from '../app.js';
 
-
-class WeatherInfo extends React.Component {
+export class WeatherInfo extends React.Component {
     render () {
         const date = document.getElementById("currentDateTime").innerHTML = myArr.list[0].dt_txt;
         const date2 = document.getElementById("day2DateTime").innerHTML = myArr.list[8].dt_txt;
