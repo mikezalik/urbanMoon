@@ -1,5 +1,7 @@
 // urbanMoon JavaScript
 //TODO: React
+
+
 'use strict';
 
 // Variables
@@ -31,14 +33,14 @@ function success(position) {
 //AJAX request
 function getWeather(lat, lon) {
     let httpRequest = new XMLHttpRequest();
-    var urlString = api + lat + "&" + lon + key;
+    let urlString = api + lat + "&" + lon + key;
 
     httpRequest.open('GET', urlString);
     httpRequest.send();
     
     httpRequest.onload = function() {
-        var myArr = httpRequest.response;
-        var myArr = JSON.parse(this.responseText);
+        let myArr = httpRequest.response;
+        let myArr = JSON.parse(this.responseText);
 
         //Temperature conversion
         tempConv = Math.round((myArr.list[0].main.temp - 273.15) * 1.8 + 32) + String.fromCharCode (176);
