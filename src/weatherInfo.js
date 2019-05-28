@@ -6,11 +6,12 @@ export class WeatherInfo extends React.Component {
     render () {
         return (
             <div>
-                <dayOne />
-                <dayTwo />
-                <dayThree />
-                <dayFour />
-                <dayFive />
+                <Titles />
+                <DayOne />
+                <DayTwo />
+                <DayThree />
+                <DayFour />
+                <DayFive />
             </div>
         );
     }
