@@ -15,4 +15,4 @@ var Titles = function Titles(props) {
         )
     );
 };
-export default titles;
+export default Titles;

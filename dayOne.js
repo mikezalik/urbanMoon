@@ -8,8 +8,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import { WeatherInfo } from "./weatherInfo";
-
 var DayOne = function (_React$Component) {
     _inherits(DayOne, _React$Component);
 
@@ -20,12 +18,51 @@ var DayOne = function (_React$Component) {
     }
 
     _createClass(DayOne, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return React.createElement(
-                'div',
+                "div",
                 null,
-                React.createElement(WeatherInfo, null)
+                React.createElement(
+                    "div",
+                    { "class": "col" },
+                    React.createElement(
+                        "h2",
+                        null,
+                        "Date"
+                    ),
+                    React.createElement("span", { id: "currentDateTime" })
+                ),
+                React.createElement(
+                    "div",
+                    { "class": "col" },
+                    React.createElement(
+                        "h2",
+                        null,
+                        "Temperature"
+                    ),
+                    React.createElement("span", { id: "currentTemperature" })
+                ),
+                React.createElement(
+                    "div",
+                    { "class": "col" },
+                    React.createElement(
+                        "h2",
+                        null,
+                        "Humidity"
+                    ),
+                    React.createElement("span", { id: "currentHumidity" })
+                ),
+                React.createElement(
+                    "div",
+                    { "class": "col" },
+                    React.createElement(
+                        "h2",
+                        null,
+                        "Summary"
+                    ),
+                    React.createElement("span", { id: "currentSummary" })
+                )
             );
         }
     }]);
