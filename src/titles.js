@@ -1,5 +1,5 @@
 import React from 'react';
-class Titles = (props) => {
+const Titles = (props) => {
     return (
         <div>
             <h1>urbanMoon</h1>

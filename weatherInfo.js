@@ -26,11 +26,12 @@ export var WeatherInfo = function (_React$Component) {
             return React.createElement(
                 'div',
                 null,
-                React.createElement('dayOne', null),
-                React.createElement('dayTwo', null),
-                React.createElement('dayThree', null),
-                React.createElement('dayFour', null),
-                React.createElement('dayFive', null)
+                React.createElement(Titles, null),
+                React.createElement(DayOne, null),
+                React.createElement(DayTwo, null),
+                React.createElement(DayThree, null),
+                React.createElement(DayFour, null),
+                React.createElement(DayFive, null)
             );
         }
     }]);
