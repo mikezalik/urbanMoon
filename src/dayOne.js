@@ -5,7 +5,14 @@ class DayOne extends React.Component {
     render() {
         return (
         <div>
-            <WeatherInfo />
+        <div class="col">
+          <h2>Date</h2>
+            <span id="currentDateTime"></span>
+        </div>
+        <div class="col">
+        <h2>Temperature</h2>
+        <span id="currentTemperature"></span>
+        </div>
 
         </div>
         );      

@@ -7,4 +7,4 @@ const Titles = (props) => {
         </div>
     )
 }
-export default titles;
+export default Titles;
