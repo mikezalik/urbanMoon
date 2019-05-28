@@ -25,4 +25,4 @@ class DayOne extends React.Component {
     }
 };
 
-ReactDOM.render(<DayOne />, document.querySelector('#row align-items-center'));
+export default DayOne;

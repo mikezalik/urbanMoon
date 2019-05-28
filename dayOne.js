@@ -72,4 +72,4 @@ var DayOne = function (_React$Component) {
 
 ;
 
-ReactDOM.render(React.createElement(DayOne, null), document.querySelector('#row align-items-center'));
+export default DayOne;
