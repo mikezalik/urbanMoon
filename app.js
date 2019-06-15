@@ -7,12 +7,12 @@ let key = "&APPID=8c77ba2f06ce2e1985605723650676a9";
 let lat, lon;
 
 //geoLocate on page load
-document.addEventListener("load", geoLocate());
+document.addEventListener("load", locate());
 
 // Geolocation - lat, lon for openweather API
-function geoLocate() {
+const locate = function geoLocate() {
     if (navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(geoLocateSuccess);
+            navigator.geolocation.getCurrentPosition(success);
             console.log("Success");
     } else {
         alert("Geolocation is not supported by this browser");
@@ -20,7 +20,7 @@ function geoLocate() {
 }
 
 //lat, lon to call getWeather and retrieve JSON
-function geoLocateSuccess(position) {
+const success = function geoLocateSuccess(position) {
     let lat = "lat=" + position.coords.latitude;
     let lon = "lon=" + position.coords.longitude;
     getWeather(lat, lon);
