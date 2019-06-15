@@ -48,7 +48,6 @@ function getWeather(lat, lon) {
   };
 }
 
-
 // lat, lon to call getWeather and retrieve JSON
 const success = function geoLocateSuccess(position) {
   const lat = `lat=${position.coords.latitude}`;
