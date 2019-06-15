@@ -1,7 +1,4 @@
-// urbanMoon JavaScript
 //TODO: React
-
-
 'use strict';
 
 // Variables
@@ -14,17 +11,16 @@ document.addEventListener("load", geoLocate());
 
 // Geolocation - lat, lon for openweather API
 function geoLocate() {
-
     if (navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(success);
-        console.log("Success");
+            navigator.geolocation.getCurrentPosition(geoLocateSuccess);
+            console.log("Success");
     } else {
         alert("Geolocation is not supported by this browser");
     }
 }
 
 //lat, lon to call getWeather and retrieve JSON
-function success(position) {
+function geoLocateSuccess(position) {
     let lat = "lat=" + position.coords.latitude;
     let lon = "lon=" + position.coords.longitude;
     getWeather(lat, lon);
