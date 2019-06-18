@@ -1,5 +1,3 @@
-
-
 import { WeatherInfo } from './weatherInfo';
 
 class DayTwo extends React.Component {
