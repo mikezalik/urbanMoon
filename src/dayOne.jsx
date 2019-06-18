@@ -1,4 +1,4 @@
-class DayOne extends React.Component {
+const dayOne = function(props, context) {
   render() {
     return (
       <div>

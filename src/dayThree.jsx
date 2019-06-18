@@ -1,12 +1,26 @@
-import { WeatherInfo } from './weatherInfo';
-
-class DayThree extends React.Component {
-  render() {
-      <div>
-          <WeatherInfo />
-
-        </div>;
+const dayThree = function(props, context) {
+    render() {
+      return (
+        <div>
+          <div className="col">
+            <h2>Date</h2>
+            <span id="currentDateTime" />
+          </div>
+          <div className="col">
+            <h2>Temperature</h2>
+            <span id="currentTemperature" />
+          </div>
+          <div className="col">
+            <h2>Humidity</h2>
+            <span id="currentHumidity" />
+          </div>
+          <div className="col">
+            <h2>Summary</h2>
+            <span id="currentSummary" />
+          </div>
+        </div>
+      );
+    }
   }
-}
-
-ReactDOM.render(<DayThree />, document.querySelector('#row align-items-center'));
+  
+  export default DayThree;
