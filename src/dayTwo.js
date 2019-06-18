@@ -1,13 +1,14 @@
-'use strict';
-import { WeatherInfo } from "./weatherInfo";
+
+
+import { WeatherInfo } from './weatherInfo';
 
 class DayTwo extends React.Component {
-    render() {
-        <div>
-            <WeatherInfo />
+  render() {
+      <div>
+          <WeatherInfo />
 
-        </div>
-    }
+        </div>;
+  }
 }
 
-ReactDOM.render (<DayTwo />, document.querySelector('#row align-items-center') );
+ReactDOM.render(<DayTwo />, document.querySelector('#row align-items-center'));
