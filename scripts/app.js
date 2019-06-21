@@ -32,13 +32,13 @@ function success(position) {
 
 // Geolocation - lat, lon for openweather API
 const geoLocationSuccess = function geoLocate() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success);
-      console.log('Success');
-    } else {
-      alert('Geolocation is not supported by this browser');
-    }
-  };
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success);
+    console.log('Success');
+  } else {
+    alert('Geolocation is not supported by this browser');
+  }
+};
 
 // geoLocate on page load
 document.addEventListener('load', geoLocationSuccess());
