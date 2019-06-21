@@ -4,8 +4,6 @@
 // Variables
 const api = 'https://api.openweathermap.org/data/2.5/weather?';
 const key = '&APPID=8c77ba2f06ce2e1985605723650676a9';
-let lat; let
-  lon;
 
 // geoLocate on page load
 document.addEventListener('load', geoLocate());
