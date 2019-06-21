@@ -13,7 +13,7 @@ function getWeather(lat, lon) {
   httpRequest.send();
 
   httpRequest.onload = function httpReq() {
-    const myArr = httpRequest.response; JSON.parse(this.responseText);
+    const myArr = JSON.parse(this.responseText);
 
     const tempConv = Math.round((myArr.main.temp - 273.15) * 1.8 + 32) + String.fromCharCode(176);
 
