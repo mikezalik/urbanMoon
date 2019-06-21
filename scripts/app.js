@@ -4,17 +4,6 @@
 const api = 'https://api.openweathermap.org/data/2.5/weather?';
 const key = '&APPID=8c77ba2f06ce2e1985605723650676a9';
 
-// Geolocation - lat, lon for openweather API
-const geoLocationSuccess = function geoLocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success);
-    console.log('Success');
-  } else {
-    alert('Geolocation is not supported by this browser');
-  }
-};
-
-
 // AJAX request
 function getWeather(lat, lon) {
   const httpRequest = new XMLHttpRequest();
@@ -40,6 +29,16 @@ function success(position) {
   const lon = `lon=${position.coords.longitude}`;
   getWeather(lat, lon);
 }
+
+// Geolocation - lat, lon for openweather API
+const geoLocationSuccess = function geoLocate() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success);
+      console.log('Success');
+    } else {
+      alert('Geolocation is not supported by this browser');
+    }
+  };
 
 // geoLocate on page load
 document.addEventListener('load', geoLocationSuccess());
