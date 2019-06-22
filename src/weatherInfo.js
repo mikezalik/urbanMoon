@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { myArr } from '../app.js';
 

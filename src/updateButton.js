@@ -1,4 +1,4 @@
-'use strict';
+
 
 class UpdateButton extends React.Component {
   constructor(props) {
@@ -12,12 +12,12 @@ class UpdateButton extends React.Component {
     }
 
     return (
-      <button onClick={() => this.setState({ update: true }) }>
+      <button onClick={() => this.setState({ update: true })}>
         Update
       </button>
     );
   }
 }
 
-let domContainer = document.querySelector('#update_button_container');
+const domContainer = document.querySelector('#update_button_container');
 ReactDOM.render(<UpdateButton />, domContainer);
