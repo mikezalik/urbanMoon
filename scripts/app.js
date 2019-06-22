@@ -4,7 +4,7 @@
 const api = 'https://api.openweathermap.org/data/2.5/weather?';
 const key = '&APPID=8c77ba2f06ce2e1985605723650676a9';
 
-// AJAX request
+// AJAX request - http request url concat
 function getWeather(lat, lon) {
   const httpRequest = new XMLHttpRequest();
   const urlString = `${api + lat}&${lon}${key}`;
@@ -12,6 +12,7 @@ function getWeather(lat, lon) {
   httpRequest.open('GET', urlString);
   httpRequest.send();
 
+  // http request - JSON parse response
   httpRequest.onload = function httpReq() {
     const myArr = JSON.parse(this.responseText);
 
