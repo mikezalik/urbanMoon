@@ -24,13 +24,14 @@ function getWeather(lat, lon) {
   };
 }
 
+// Latitude and Longitude if geolocation is successful
 const geoLocationSuccess = function success(position) {
   const lat = `lat=${position.coords.latitude}`;
   const lon = `lon=${position.coords.longitude}`;
   getWeather(lat, lon);
 };
 
-// Geolocation - lat, lon for openweather API
+// Geolocation flow - lat, lon for openweather API
 const geoLocationRequest = function geoLocate() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(geoLocationSuccess);
@@ -40,5 +41,5 @@ const geoLocationRequest = function geoLocate() {
   }
 };
 
-// geoLocate on page load
+// geoLocationRequest on page load
 document.addEventListener('load', geoLocationRequest());
