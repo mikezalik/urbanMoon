@@ -9,18 +9,18 @@
       content="width=device-width, initial-scale= .99, shrink-to-fit=no"
     />
     <link
-      rel="stylesheet"
+      rel="stylesheet preconnect"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Oswald"
-      rel="stylesheet"
+      rel="stylesheet preconnect"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
-      rel="stylesheet"
+      rel="stylesheet preconnect"
     />
   </head>
   <body>
