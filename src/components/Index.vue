@@ -34,36 +34,38 @@
         <p class="lead"></p>
       </div>
     </div>
-    <div class="container-info">
-      <div class="row align-items-center">
-        <div class="col">
-          <h2>Location</h2>
-          <span id="city"></span>
-        </div>
-        <div class="col">
-          <h2>Temperature</h2>
-          <span id="temperature"></span>
-        </div>
-        <div class="col">
-          <h2>Humidity</h2>
-          <span id="humidity"></span>
-        </div>
-        <div class="col">
-          <h2>Summary</h2>
-          <span id="summary"></span>
+    <div class="wrap">
+      <div class="container-info">
+        <div class="row align-items-center">
+          <div class="col">
+            <h2>Location</h2>
+            <span id="city"></span>
+          </div>
+          <div class="col">
+            <h2>Temperature</h2>
+            <span id="temperature"></span>
+          </div>
+          <div class="col">
+            <h2>Humidity</h2>
+            <span id="humidity"></span>
+          </div>
+          <div class="col">
+            <h2>Summary</h2>
+            <span id="summary"></span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container-info">
-      <div class="row align-items-end">
-        <div class="col">
-          <button
-            type="button"
-            class="btn btn-outline-dark"
-            onclick="location.reload();"
-          >
-            UPDATE
-          </button>
+      <div class="container-info">
+        <div class="row align-items-end">
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              onclick="location.reload();"
+            >
+              UPDATE
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -281,6 +283,10 @@ body {
 }
 
 /* MAIN CONTENT */
+.wrap {
+  background-color: #f0f0eb;
+  height: 25em;
+}
 .row {
   background-color: #f0f0eb;
 }
