@@ -20,24 +20,22 @@ const WeatherInfo = () => {
     const response = await fetch(urlString);
     const data = await response.json();
     console.log(data);
+
+    setLocation(data.name);
+    setTemperature(
+      Math.round((data.main.temp - 273.15) * 1.8 + 32) +
+        String.fromCharCode(176)
+    );
+    setHumidity(`${data.main.humidity}%`);
+    setSummary(data.weather[0].main);
   };
 
-  /*  const tempConv =
-        Math.round((myArr.main.temp - 273.15) * 1.8 + 32) +
-        String.fromCharCode(176);
-
-      document.getElementById('city').innerHTML = myArr.name;
-      document.getElementById('temperature').innerHTML = tempConv;
-      document.getElementById('humidity').innerHTML = `${myArr.main.humidity}%`;
-      document.getElementById('summary').innerHTML =
-        myArr.weather[0].description;
-    };
-  } */
-
   // Latitude and Longitude if geolocation is successful
-  const geoLocationSuccess = function success(position) {
+  const geoLocationSuccess = (position) => {
     const lat = `lat=${position.coords.latitude}`;
     const lon = `lon=${position.coords.longitude}`;
+    console.log('Success');
+    console.log(lat, lon);
     getWeather(lat, lon);
   };
 
@@ -45,7 +43,7 @@ const WeatherInfo = () => {
   const geoLocationRequest = function geoLocate() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(geoLocationSuccess);
-      console.log('Success');
+      console.log('Position requested');
     } else {
       alert('Geolocation is not supported by this browser');
     }
@@ -57,19 +55,19 @@ const WeatherInfo = () => {
         <div className="row align-items-center">
           <div className="col">
             <h2>Location</h2>
-            <span id="city"></span>
+            <span>{location}</span>
           </div>
           <div className="col">
             <h2>Temperature</h2>
-            <span id="temperature"></span>
+            <span>{temperature}</span>
           </div>
           <div className="col">
             <h2>Humidity</h2>
-            <span id="humidity"></span>
+            <span>{humidity}</span>
           </div>
           <div className="col">
             <h2>Summary</h2>
-            <span id="summary"></span>
+            <span>{summary}</span>
           </div>
         </div>
       </div>
@@ -79,7 +77,7 @@ const WeatherInfo = () => {
             <button
               type="button"
               className="btn btn-outline-dark"
-              onClick={geoLocationRequest}
+              onClick={geoLocationRequest()}
             >
               UPDATE
             </button>
