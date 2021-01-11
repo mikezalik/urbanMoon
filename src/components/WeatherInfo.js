@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const WeatherInfo = () => {
-  // Variables
-  const api = 'https://api.openweathermap.org/data/2.5/weather?';
-  const key = '&APPID=8c77ba2f06ce2e1985605723650676a9';
-
   useEffect(() => {
     geoLocationRequest();
   }),
     [];
+
+  // Variables
+  const api = 'https://api.openweathermap.org/data/2.5/weather?';
+  const key = '&APPID=8c77ba2f06ce2e1985605723650676a9';
+
+  const [location, setLocation] = useState();
+  const [temperature, setTemperature] = useState();
+  const [humidity, setHumidity] = useState();
+  const [summary, setSummary] = useState();
 
   // AJAX request - http request url concat
   function getWeather(lat, lon) {
