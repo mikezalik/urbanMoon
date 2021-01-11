@@ -30626,7 +30626,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var WeatherInfo = function WeatherInfo() {
   (0, _react.useEffect)(function () {
     geoLocationRequest();
-  }), []; // Variables
+  }, []); // Variables
 
   var api = 'https://api.openweathermap.org/data/2.5/weather?';
   var key = '&APPID=8c77ba2f06ce2e1985605723650676a9';
@@ -30670,8 +30670,12 @@ var WeatherInfo = function WeatherInfo() {
             case 6:
               data = _context.sent;
               console.log(data);
+              setLocation(data.name);
+              setTemperature(Math.round((data.main.temp - 273.15) * 1.8 + 32) + String.fromCharCode(176));
+              setHumidity("".concat(data.main.humidity, "%"));
+              setSummary(data.weather[0].main);
 
-            case 8:
+            case 12:
             case "end":
               return _context.stop();
           }
@@ -30682,31 +30686,22 @@ var WeatherInfo = function WeatherInfo() {
     return function getWeather(_x, _x2) {
       return _ref.apply(this, arguments);
     };
-  }();
-  /*  const tempConv =
-        Math.round((myArr.main.temp - 273.15) * 1.8 + 32) +
-        String.fromCharCode(176);
-       document.getElementById('city').innerHTML = myArr.name;
-      document.getElementById('temperature').innerHTML = tempConv;
-      document.getElementById('humidity').innerHTML = `${myArr.main.humidity}%`;
-      document.getElementById('summary').innerHTML =
-        myArr.weather[0].description;
-    };
-  } */
-  // Latitude and Longitude if geolocation is successful
+  }(); // Latitude and Longitude if geolocation is successful
 
 
-  var geoLocationSuccess = function success(position) {
+  var geoLocationSuccess = function geoLocationSuccess(position) {
     var lat = "lat=".concat(position.coords.latitude);
     var lon = "lon=".concat(position.coords.longitude);
+    console.log('Success');
+    console.log(lat, lon);
     getWeather(lat, lon);
   }; // Geolocation flow - lat, lon for openweather API
 
 
-  var geoLocationRequest = function geoLocate() {
+  var geoLocationRequest = function geoLocationRequest() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(geoLocationSuccess);
-      console.log('Success');
+      console.log('Location Requested');
     } else {
       alert('Geolocation is not supported by this browser');
     }
@@ -30720,30 +30715,22 @@ var WeatherInfo = function WeatherInfo() {
     className: "row align-items-center"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "col"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Location"), /*#__PURE__*/_react.default.createElement("span", {
-    id: "city"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Location"), /*#__PURE__*/_react.default.createElement("span", null, location)), /*#__PURE__*/_react.default.createElement("div", {
     className: "col"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Temperature"), /*#__PURE__*/_react.default.createElement("span", {
-    id: "temperature"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Temperature"), /*#__PURE__*/_react.default.createElement("span", null, temperature)), /*#__PURE__*/_react.default.createElement("div", {
     className: "col"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Humidity"), /*#__PURE__*/_react.default.createElement("span", {
-    id: "humidity"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Humidity"), /*#__PURE__*/_react.default.createElement("span", null, humidity)), /*#__PURE__*/_react.default.createElement("div", {
     className: "col"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Summary"), /*#__PURE__*/_react.default.createElement("span", {
-    id: "summary"
-  })))), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Summary"), /*#__PURE__*/_react.default.createElement("span", null, summary)))), /*#__PURE__*/_react.default.createElement("div", {
     className: "container-info"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "row align-items-end"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "col"
   }, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: geoLocationRequest,
     type: "button",
-    className: "btn btn-outline-dark",
-    onClick: geoLocationRequest
+    className: "btn btn-outline-dark"
   }, "UPDATE")))));
 };
 
@@ -30756,7 +30743,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-require("regenerator-runtime");
+require("regenerator-runtime/runtime");
 
 var _Jumbotron = _interopRequireDefault(require("./components/Jumbotron"));
 
@@ -30773,7 +30760,7 @@ var App = function App() {
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./components/Jumbotron":"components/Jumbotron.js","./components/Navbar":"components/Navbar.js","./components/NavbarBottom":"components/NavbarBottom.js","./components/WeatherInfo":"components/WeatherInfo.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./components/Jumbotron":"components/Jumbotron.js","./components/Navbar":"components/Navbar.js","./components/NavbarBottom":"components/NavbarBottom.js","./components/WeatherInfo":"components/WeatherInfo.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -30801,7 +30788,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52437" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57768" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

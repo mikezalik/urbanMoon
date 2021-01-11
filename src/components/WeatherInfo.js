@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 const WeatherInfo = () => {
   useEffect(() => {
     geoLocationRequest();
-  }),
-    [];
+  }, []);
 
   // Variables
   const api = 'https://api.openweathermap.org/data/2.5/weather?';
@@ -40,10 +39,10 @@ const WeatherInfo = () => {
   };
 
   // Geolocation flow - lat, lon for openweather API
-  const geoLocationRequest = function geoLocate() {
+  const geoLocationRequest = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(geoLocationSuccess);
-      console.log('Position requested');
+      console.log('Location Requested');
     } else {
       alert('Geolocation is not supported by this browser');
     }
@@ -75,9 +74,9 @@ const WeatherInfo = () => {
         <div className="row align-items-end">
           <div className="col">
             <button
+              onClick={geoLocationRequest}
               type="button"
               className="btn btn-outline-dark"
-              onClick={geoLocationRequest()}
             >
               UPDATE
             </button>
