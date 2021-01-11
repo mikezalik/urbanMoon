@@ -15,19 +15,14 @@ const WeatherInfo = () => {
   const [humidity, setHumidity] = useState();
   const [summary, setSummary] = useState();
 
-  // AJAX request - http request url concat
-  function getWeather(lat, lon) {
-    const httpRequest = new XMLHttpRequest();
+  const getWeather = async (lat, lon) => {
     const urlString = `${api + lat}&${lon}${key}`;
+    const response = await fetch(urlString);
+    const data = await response.json();
+    console.log(data);
+  };
 
-    httpRequest.open('GET', urlString);
-    httpRequest.send();
-
-    // http request - JSON parse response
-    httpRequest.onload = function httpReq() {
-      const myArr = JSON.parse(this.responseText);
-
-      const tempConv =
+  /*  const tempConv =
         Math.round((myArr.main.temp - 273.15) * 1.8 + 32) +
         String.fromCharCode(176);
 
@@ -37,7 +32,7 @@ const WeatherInfo = () => {
       document.getElementById('summary').innerHTML =
         myArr.weather[0].description;
     };
-  }
+  } */
 
   // Latitude and Longitude if geolocation is successful
   const geoLocationSuccess = function success(position) {
@@ -57,34 +52,34 @@ const WeatherInfo = () => {
   };
 
   return (
-    <div class="wrap">
-      <div class="container-info">
-        <div class="row align-items-center">
-          <div class="col">
+    <div className="wrap">
+      <div className="container-info">
+        <div className="row align-items-center">
+          <div className="col">
             <h2>Location</h2>
             <span id="city"></span>
           </div>
-          <div class="col">
+          <div className="col">
             <h2>Temperature</h2>
             <span id="temperature"></span>
           </div>
-          <div class="col">
+          <div className="col">
             <h2>Humidity</h2>
             <span id="humidity"></span>
           </div>
-          <div class="col">
+          <div className="col">
             <h2>Summary</h2>
             <span id="summary"></span>
           </div>
         </div>
       </div>
-      <div class="container-info">
-        <div class="row align-items-end">
-          <div class="col">
+      <div className="container-info">
+        <div className="row align-items-end">
+          <div className="col">
             <button
               type="button"
-              class="btn btn-outline-dark"
-              onclick="location.reload();"
+              className="btn btn-outline-dark"
+              onClick={geoLocationRequest}
             >
               UPDATE
             </button>
