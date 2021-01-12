@@ -18,7 +18,6 @@ const WeatherInfo = () => {
     const urlString = `${api + lat}&${lon}${key}`;
     const response = await fetch(urlString);
     const data = await response.json();
-    console.log(data);
 
     setLocation(data.name);
     setTemperature(
@@ -33,8 +32,6 @@ const WeatherInfo = () => {
   const geoLocationSuccess = (position) => {
     const lat = `lat=${position.coords.latitude}`;
     const lon = `lon=${position.coords.longitude}`;
-    console.log('Success');
-    console.log(lat, lon);
     getWeather(lat, lon);
   };
 
@@ -42,7 +39,6 @@ const WeatherInfo = () => {
   const geoLocationRequest = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(geoLocationSuccess);
-      console.log('Location Requested');
     } else {
       alert('Geolocation is not supported by this browser');
     }
