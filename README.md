@@ -21,7 +21,7 @@ urbanMoon is a single page application I designed to quickly retrieve location b
 
 ## Screenshot 📸
 
-| <img alt="Landing Page" src="design/Screen Shot 2021-01-26 at 11.17.24 AM.png" width="500"> |
+| <img alt="Landing Page" src="design/Screen Shot 2021-01-26 at 11.17.24 AM.png" width="600"> |
 | :-----------------------------------------------------------------------------------------: |
 |                                        Landing Page                                         |
 
@@ -39,8 +39,7 @@ Using a progressive enhancement strategy with an HTML first approach and within 
 
 - WCAG 2.0 Level AA Compliance
 - VoiceOver Rotor: the Rotor is a commonly used feature that allows for more efficient web browsing by listing common elements like headings, links, and images. To maximize this feature I ensured that the page had proper heading structure.
-- Details and Summary Elements: use of the details and summary elements provide interactivity without the use of JavaScript to hide content.
-- Emoji: they are accessible to screen readers.
+- Emoji: these are also accessible to screen readers.
 
 ## Tech Used 💻
 
