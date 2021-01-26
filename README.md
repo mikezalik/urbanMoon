@@ -19,9 +19,9 @@ npm install
 
 urbanMoon is a single page application I designed to quickly retrieve location based weather updates with user permission.
 
-## Screenshots 📸
+## Screenshot 📸
 
-| <img alt="Landing Page" src="design/Screen Shot 2021-01-26 at 11.17.24 AM.png" width="350">
+| <img alt="Landing Page" src="design/Screen Shot 2021-01-26 at 11.17.24 AM.png" width="500"> |
 | Landing Page |
 
 ## Design Process 📐
@@ -58,4 +58,4 @@ Using a progressive enhancement strategy with an HTML first approach and within 
 
 ## Future Improvements 🚀
 
-There are a
+I would like to build out a week based forecast feature and allow for users to search the forecast of other areas.
