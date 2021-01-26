@@ -21,7 +21,7 @@ urbanMoon is a single page application I designed to quickly retrieve location b
 
 ## Screenshot 📸
 
-| <img alt="Landing Page" src="design/Screen Shot 2021-01-26 at 11.17.24 AM.png" width="600"> |
+| <img alt="Landing Page" src="design/Screen Shot 2021-01-26 at 11.17.24 AM.png" width="400"> |
 | :-----------------------------------------------------------------------------------------: |
 |                                        Landing Page                                         |
 
