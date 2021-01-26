@@ -1,4 +1,4 @@
-# urbanMoon ☕️
+# urbanMoon 🌔
 
 [urbanMoon](https://brave-booth-15c32b.netlify.app/) is a front-end react SPA designed to provide quick, local weather updates on the go.
 
